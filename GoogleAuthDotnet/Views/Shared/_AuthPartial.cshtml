@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Authentication;
+@using Microsoft.AspNetCore.Authentication.Cookies;
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div>
+        <h1>Welcome, @User.Identity.Name!</h1>
+        <p>You are logged in.</p>
+        <form method="post" asp-controller="Auth" asp-action="Signout" asp-area="">
+            <button type="submit" class="btn btn-danger"> Signout </button>
+        </form>
+    </div>
+}
+else{
+    @*  <div>
+      <h1>Welcome, Guest!</h1>
+        <p>You are not logged in.</p> *@
+        @* <form method="post" asp-controller="Auth" asp-action="Signin" asp-area="">
+            <button type="submit" class="btn btn-primary"> Signin </button>
+        </form> *@
+
+       @*  <a asp-controller="Auth" asp-action="Login">
+            Sign in with Google
+        </a> 
+    </div>*@
+
+    <a asp-controller="Auth" asp-action="Login" class="fs-6 text-primary">
+        Sign in with Google
+    </a>
+}
