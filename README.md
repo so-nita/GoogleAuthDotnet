@@ -16,9 +16,9 @@ Replace the `ClientId` and `ClientSecret` in your `appsettings.json` file with t
 Ensure that the Authorized Redirect URIs in your Google Cloud OAuth settings match your application's URL.
 
 ### Example:
-If your app runs on `https://localhost:44369`, update the redirect URI to:
+If your app runs on `https://localhost:7185`, update the redirect URI to:
 ```
-https://localhost:44369/signin-google
+https://localhost:7185/signin-google
 ```
 
 ### How to Update Redirect URIs:
